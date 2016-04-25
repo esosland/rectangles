@@ -23,7 +23,9 @@ public class App {
 
       Rectangle myRectangle = new Rectangle(length, width);
       model.put("myRectangle", myRectangle);
-    })
-  }
 
+      model.put("template", "templates/rectangle.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+  }
 }
